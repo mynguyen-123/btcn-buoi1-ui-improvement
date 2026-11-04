@@ -95,3 +95,32 @@ img {
         justify-content: center;
     }
 }
+/* Thiết lập CSS Grid chia 4 cột */
+.product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+/* Ép khung ảnh thành hình vuông (tỷ lệ 1:1) */
+.product-img { 
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; /* Phủ kín khung hình vuông */
+    margin-bottom: 15px; 
+}
+
+/* Thêm hiệu ứng nhấc thẻ sản phẩm lên khi di chuột */
+.product-card:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1); 
+}
+
+/* =========================================
+   MEDIA QUERY CHO ĐIỆN THOẠI
+   ========================================= */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Thu hẹp màn hình thì chỉ hiển thị 2 cột */
+    }
+}
