@@ -49,3 +49,32 @@ img {
 
 .btn-add-cart { background-color: #318259; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background-color 0.2s; }
 .btn-add-cart:hover { background-color: #246342; }
+/* Biến header thành Flex container, dàn các phần tử nằm ngang */
+.site-header {
+    display: flex; 
+    justify-content: space-between; /* Đẩy Logo sang trái, Action sang phải, Menu ở giữa */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 16px 24px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* Biến menu thành Flex container để các link nằm ngang */
+.nav-menu {
+    display: flex;
+    gap: 20px; /* Tạo khoảng cách 20px giữa các nút trong menu */
+}
+
+/* Định dạng cơ bản cho link trong menu */
+.nav-menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+/* Dàn ngang nhóm nút tìm kiếm, giỏ hàng */
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
