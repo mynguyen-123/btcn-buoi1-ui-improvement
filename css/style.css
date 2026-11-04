@@ -93,27 +93,47 @@ img {
 
 
 /* =========================================
-   MEDIA QUERY (RESPONSIVE CHO ĐIỆN THOẠI)
+   BÀI 6: MEDIA QUERY (RESPONSIVE 3 KÍCH THƯỚC)
    ========================================= */
-@media (max-width: 768px) {
-    /* Header xếp dọc */
+
+/* 1. Màn hình Laptop (1366px) */
+/* Không cần viết Media Query vì trình duyệt sẽ tự động lấy các code gốc (chia 4 cột) mà bạn đã viết ở trên. */
+
+/* 2. Màn hình Tablet (Kiểm tra mốc 768px) */
+@media (max-width: 900px) {
+    /* Ép Header xếp thành cột dọc để không bị tràn chữ */
     .site-header {
         flex-direction: column; 
         gap: 15px;
         padding: 15px;
     }
-    
     .nav-menu {
         flex-wrap: wrap; 
         justify-content: center;
     }
     
-    .header-actions {
-        justify-content: center;
-    }
-
-    /* Lưới sản phẩm rút còn 2 cột */
+    /* Thu hẹp lưới sản phẩm xuống còn 2 cột */
     .product-grid {
         grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+}
+
+/* 3. Màn hình Mobile (Kiểm tra mốc 390px) */
+@media (max-width: 480px) {
+    .site-header {
+        padding: 10px;
+    }
+    
+    /* Thu hẹp khoảng cách các chữ trong menu để vừa màn hình điện thoại */
+    .nav-menu {
+        gap: 12px; 
+        font-size: 14px;
+    }
+    
+    /* Thu lưới sản phẩm về 1 CỘT DUY NHẤT để hình ảnh to, dễ đọc chữ và bấm nút trên điện thoại */
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 15px;
     }
 }
