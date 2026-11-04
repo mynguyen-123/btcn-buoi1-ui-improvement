@@ -78,3 +78,20 @@ img {
     display: flex;
     gap: 15px;
 }
+/* Xử lý khi menu bị tràn trên màn hình nhỏ (Điện thoại/Cửa sổ hẹp) */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column; /* Đổi hướng xếp từ ngang sang dọc */
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap; /* Cho phép các menu rớt dòng gọn gàng nếu thiếu chỗ */
+        justify-content: center;
+    }
+    
+    .header-actions {
+        justify-content: center;
+    }
+}
